@@ -72,24 +72,12 @@ nav a {
     text-align: center;
 }
 .nav-links:hover, .nav-links:focus {
-    background-color: indigo;
+    background-color: black;
 } 
 header button:active, .nav-links:active {
     background-color: var(--secondary-logo-color);
 }
 
-/* footer styles */
-footer {
-    margin: 0;
-    padding: .5em;
-    text-align: center;
-    font-size: smaller;
-    background-color: var(--header-footer-color);
-}
-
-/* ==================================
-    Home Page
-   ================================== */
 /* welcome section styles */
 #welcome {
     text-align: center;
@@ -118,14 +106,14 @@ h1 {
     font-size: smaller;
 }
 
-/* ==================================
-    Get Tickets
-   ================================== */
-/* form styles */
-form {
-    padding-top: 5em;
+/* footer styles */
+footer {
+    margin: 0;
+    padding: .5em;
+    text-align: center;
+    font-size: smaller;
+    background-color: var(--header-footer-color);
 }
-
 @media screen and (min-width: 480px) {
     h1 {
         letter-spacing: .2em;
@@ -174,8 +162,6 @@ form {
     .cards {
         display: flex;
         align-items: center;
-        max-width: 1200px;
-        margin-inline: auto;
     }
     .card-img {
         max-width: 50%;
@@ -183,5 +169,11 @@ form {
     /* make every odd card flex in the opposite direction */
     .cards:nth-child(odd) {
         flex-direction: row-reverse;
+    }
+    @media screen and (min-width:1280px) {
+        .cards{
+            max-width: 1200px;   
+            margin-inline: auto;         
+        }
     }
 }

@@ -1,71 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Vivid Cinemas - Home</title>
 
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vivid Cinemas - Home</title>
+        <link rel="icon" href="images/film-reel.svg" />
+        <link rel="stylesheet" href="styles/main-styles.css" />
+        <link href="https://fonts.googleapis.com/css2?family=Megrim&family=Raleway" rel="stylesheet" />
+    </head>
 
-    <link rel="icon" href="images/film-reel.svg" />
-    <link rel="stylesheet" href="styles/main-styles.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Megrim&family=Raleway" rel="stylesheet" />
-</head>
+    <script src="scripts/main-scripts.js"></script>
 
-<script src="scripts/main-scripts.js"></script>
+    <body onload="loadHeader(); loadFooter();">
+        <header>
+            <!-- header will be populated with the logo and nav thru JS -->
+        </header>
 
-<body onload="loadHeader(); loadFooter();">
-    <header>
-        <!-- header will be populated with the logo and nav thru JS -->
-    </header>
+        <section id="welcome">
+            <h1>Vivid Cinemas</h1>
+            <p>The go-to destination for all the movie enthusiants!</p>
+        </section>
 
-    <section id="welcome">
-        <h1>Vivid Cinemas</h1>
-        <p>
-            The go-to destination for all the movie enthusiants!
-        </p>
-    </section>
+        <section class="cards">
+            <img class="card-img" src="images/disinfecting-movie-theater.jpg" alt="man disinfecting movie theater" />
 
-    <section class="cards">
-        <img class="card-img" src="images/disinfecting-movie-theater.jpg" alt="man disinfecting movie theater" />
+            <div class="card-info">
+                <h2>Welcome back to the movies</h2>
+                <p>
+                    We are very excited to have you back at our movie theaters. Your safety is our number one priority,
+                    so we are working to maintain a clean and safe enronement in all of our theaters.
+                </p>
+            </div>
+        </section>
 
-        <div class="card-info">
-            <h2>Welcome back to the movies</h2>
-            <p>
-                We are very excited to have you back at our movie theaters. Your safety is our number one priority, so
-                we are working to maintain a clean and safe enronement in all of our theaters.
-            </p>
-        </div>
-    </section>
+        <section class="cards">
+            <img class="card-img" src="images/movie-poster.jpg" alt="movies released in 2021" />
 
-    <section class="cards">
-        <img class="card-img" src="images/movie-poster.jpg" alt="movies released in 2021" />
+            <div class="card-info">
+                <h2>Watch the latest and greatest movies</h2>
+                <p>
+                    The freshest and the most exiciting movies are always available for screening at your local Vivid
+                    Cinemas location. From animation movies that the whole family can enjoy to skin-crawling horror
+                    movies that will keep you awake at night, we got something for everyone.
+                </p>
+            </div>
+        </section>
 
-        <div class="card-info">
-            <h2>Watch the latest and greatest movies</h2>
-            <p>
-                The freshest and the most exiciting movies are always available for screening at your local Vivid
-                cinemas
-                location. From animation movies that the whole family can enjoy to skin-crawling horror movies that
-                will keep you awake at night, we got something for everyone.
-            </p>
-        </div>
-    </section>
+        <section class="cards">
+            <img class="card-img" src="images/people-watching-movie.jpg" alt="movies released in 2021" />
 
-    <section class="cards">
-        <img class="card-img" src="images/people-watching-movie.jpg" alt="movies released in 2021" />
+            <div class="card-info">
+                <h2>Sit back and enjoy the show</h2>
+                <p>
+                    Our theaters are dedicated to ensure that you have the best experience with you friends and family.
+                    Come on over, grab some popcorn, and relax while you watch the most-talked about movies.
+                </p>
+            </div>
+        </section>
 
-        <div class="card-info">
-            <h2>Sit back and enjoy the show</h2>
-            <p>
-                Our theaters are dedicated to ensure that you have the best experience with you friends and family. Come
-                on over, grab some popcorn, and relax while you watch the most-talked about movies.
-            </p>
-        </div>
-    </section>
-
-    <footer>
-        <!-- footer will be loaded in using JS -->
-    </footer>
-</body>
-
+        <footer>
+            <!-- footer will be loaded in using JS -->
+        </footer>
+    </body>
 </html>

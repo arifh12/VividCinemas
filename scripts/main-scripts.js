@@ -1,7 +1,7 @@
 // dynamically adding the nav bar to ensure reusability
 function loadHeader() {
     // targets the first header element, since there is only one
-    document.getElementsByTagName("header")[0].innerHTML = `<div id="logo"><a href=""><img src="images/vivid-cinemas-logo.png" /></a></div>
+    document.getElementsByTagName("header")[0].innerHTML = `<div id="logo"><a href="index.html"><img src="images/vivid-cinemas-logo.png" /></a></div>
     <nav id="navbar">
         <ul id="nav-list">
             <li><a class="nav-links" href="index.html">Home</a></li>
