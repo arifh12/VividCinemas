@@ -27,8 +27,8 @@ h1, h2 {
 
 /* header styles */
 header {
-    position: fixed;
-    width: 100%;
+    position: sticky;
+    top: 0;
     background-color: var(--header-footer-color);
     display: flex;
     flex-direction: column;
@@ -78,12 +78,23 @@ header button:active, .nav-links:active {
     background-color: var(--secondary-logo-color);
 }
 
+/* footer styles */
+footer {
+    margin: 0;
+    padding: .5em;
+    text-align: center;
+    font-size: smaller;
+    background-color: var(--header-footer-color);
+}
+
+/* ==================================
+    Home Page
+   ================================== */
 /* welcome section styles */
 #welcome {
     text-align: center;
     border-bottom: 2px white solid;
-    margin: 0 .5em 2em;
-    padding-top: 5em;
+    margin: 2em .5em;
 }
 #welcome p {
     font-style: italic;
@@ -107,14 +118,14 @@ h1 {
     font-size: smaller;
 }
 
-/* footer styles */
-footer {
-    margin: 0;
-    padding: .5em;
-    text-align: center;
-    font-size: smaller;
-    background-color: var(--header-footer-color);
+/* ==================================
+    Get Tickets
+   ================================== */
+/* form styles */
+form {
+    padding-top: 5em;
 }
+
 @media screen and (min-width: 480px) {
     h1 {
         letter-spacing: .2em;
