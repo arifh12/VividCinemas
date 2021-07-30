@@ -22,11 +22,11 @@
             <ul>
                 <li>
                     <label for="name">Full Name:</label><br>
-                    <input id="name" type="text" name="name">
+                    <input id="name" type="text" name="name" required>
                 </li>
                 <li>
                     <label for="phone">Phone:</label><br>
-                    <input id="phone" type="tel" name="phone">
+                    <input id="phone" type="tel" name="phone" required>
                 </li>
                 <li>
                     <label for="email">Email:</label><br>
@@ -36,8 +36,23 @@
         </fieldset>
 
         <fieldset>
-            <legend>Movie Selection</legend>
-            
+            <legend>Booking Details</legend>
+            <ul>
+                <li>
+                    <label for="movie">Movie Selection:</label><br>
+                    <select id="movie" name="movie" required>
+                        <option>Black Widow</option>
+                        <option>Jungle Cruise</option>
+                        <option>Pig</option>
+                        <option>Snake Eyes</option>
+                        <option>Space Jam: A New Legacy</option>
+                        <option>The Green Knight</option>
+                    </select>
+                </li>
+                <li>
+                    <label for=""></label>
+                </li>
+            </ul>
         </fieldset>
     </form>
 
