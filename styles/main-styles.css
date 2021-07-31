@@ -21,7 +21,7 @@ body {
     background-image: linear-gradient(-45deg, var(--bg-color-2), var(--bg-color-1));
     background-attachment: fixed;
 }
-h1, h2 {
+h2 {
     color: var(--primary-logo-color);
 }
 
@@ -88,7 +88,6 @@ footer {
 }
 
 .content {
-    min-height: 85vh;
     max-width: 1200px;  
 }
 
@@ -108,7 +107,6 @@ footer {
     margin: 0;
     font-family: 'Megrim', cursive;
     font-size: 3rem;
-    text-shadow: 2px 2px 2px var(--secondary-logo-color);
 }
 
 /* new movies section styles */
@@ -130,6 +128,10 @@ footer {
 form {
     max-width: 40em;
     margin: 2em auto;
+    padding-inline: .2em;
+}
+form h1 {
+    text-align: center;
 }
 form ul {
     list-style: none;
@@ -158,12 +160,15 @@ fieldset {
 }
 .form-buttons > * {
     flex: 0 1 48%;
+    cursor: pointer;
+}
+input[type="submit"] {
+    background-color: var(--primary-logo-color);
+    color: white;
+    border: 2px solid var(--primary-logo-color);
 }
 
 @media screen and (min-width: 480px) {
-    #welcome h1 {
-        letter-spacing: .2em;
-    }
     .cards {
         padding: .5em;
     }
@@ -189,6 +194,10 @@ fieldset {
     }
     .card-info {
         line-height: 150%;
+    }
+    form h1 {
+        font-size: 3rem;
+        text-align: left;
     }
 }
 @media screen and (min-width: 940px) {
