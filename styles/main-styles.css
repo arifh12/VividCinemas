@@ -5,6 +5,7 @@
     --bg-color-1: #04619f;
     --bg-color-2: #380036;
     --header-footer-color: #1c1c1c;
+    --translucent-black: rgba(0, 0, 0, 0.7);
 }
 html {
     box-sizing: border-box;
@@ -24,7 +25,7 @@ body {
 h1 {
     text-align: center;
 }
-h2 {
+h2, h3 {
     color: var(--primary-logo-color);
 }
 
@@ -114,7 +115,7 @@ footer {
 
 /* new movies section styles */
 .cards {
-    background-color: black;
+    background-color: var(--translucent-black);
     margin-bottom: 2em;
 }
 .card-img {
@@ -151,7 +152,7 @@ fieldset + fieldset {
 }
 fieldset {
     padding-inline: 5%;
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0.7);;
 }
 .form-buttons {
     display: flex;
@@ -164,36 +165,19 @@ fieldset {
 input[type="date"], input[type="number"] {
     max-width: 10em;
 }
-input[type="submit"] {
+.submit-button {
     background-color: var(--primary-logo-color);
     color: white;
     border: 2px solid var(--primary-logo-color);
 }
 
 /* =============================
-    Showtimes Page
+    Now Playing Page
 ============================= */
-#grid-container {
-    display: grid;
-    grid-template-columns: min-content 1fr min-content;
-    grid-template-rows: min-content repeat(10, max-content);
-    grid-auto-flow: column;
-}
 #grid-header {
-    grid-area: 1 / 1 / 2 / -1;
-}
-#quick-links {
-    grid-area: 2 / 1 / -1 / 2;
-}
-#coming-soon {
-    grid-area: 2 / -2 / -1 / -1;
-}
-.movie-cards {
-    background-color: rgba(0, 0, 0, 0.7);
-}
-#grid-container img {
-    float: left;
-    max-width: 200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 @media screen and (min-width: 480px) {
@@ -229,7 +213,6 @@ input[type="submit"] {
     }
     h1 {
         font-size: 3rem;
-        text-align: left;
     }
 }
 @media screen and (min-width: 940px) {
@@ -262,5 +245,33 @@ input[type="submit"] {
     /* make every odd card flex in the opposite direction */
     .cards:nth-child(odd) {
         flex-direction: row-reverse;
+    }
+    #grid-container {
+        display: grid;
+        grid-template-columns: min-content 1fr min-content;
+        grid-template-rows: min-content repeat(6, max-content);
+        grid-auto-flow: column;
+        gap: 1em;
+    }
+    #grid-header {
+        grid-area: 1 / 1 / 2 / -1;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    #search-showtimes {
+        grid-area: 2 / 1 / -1 / 2;
+    }
+    #coming-soon {
+        grid-area: 2 / -2 / 8 / -1;
+        background-color: var(--translucent-black);
+        padding-inline: .5em;
+    }
+    .movie-cards {
+        background-color: var(--translucent-black);
+    }
+    #grid-container img {
+        float: left;
+        max-width: 200px;
     }
 }
