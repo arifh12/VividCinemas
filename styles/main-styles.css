@@ -21,6 +21,9 @@ body {
     background-image: linear-gradient(-45deg, var(--bg-color-2), var(--bg-color-1));
     background-attachment: fixed;
 }
+h1 {
+    text-align: center;
+}
 h2 {
     color: var(--primary-logo-color);
 }
@@ -130,9 +133,6 @@ form {
     margin: 2em auto;
     padding-inline: .2em;
 }
-form h1 {
-    text-align: center;
-}
 form ul {
     list-style: none;
     margin: 0;
@@ -143,7 +143,6 @@ form ul li {
 }
 form input, form select {
     font-size: 1.2rem;
-    padding: .2em .4em;
     border-radius: 5px;
     width: 100%;
 }
@@ -151,7 +150,7 @@ fieldset + fieldset {
     margin-top: 2em;
 }
 fieldset {
-    padding-inline: 10%;
+    padding-inline: 5%;
     background-color: rgba(0, 0, 0, 0.4);
 }
 .form-buttons {
@@ -162,10 +161,39 @@ fieldset {
     flex: 0 1 48%;
     cursor: pointer;
 }
+input[type="date"], input[type="number"] {
+    max-width: 10em;
+}
 input[type="submit"] {
     background-color: var(--primary-logo-color);
     color: white;
     border: 2px solid var(--primary-logo-color);
+}
+
+/* =============================
+    Showtimes Page
+============================= */
+#grid-container {
+    display: grid;
+    grid-template-columns: min-content 1fr min-content;
+    grid-template-rows: min-content repeat(10, max-content);
+    grid-auto-flow: column;
+}
+#grid-header {
+    grid-area: 1 / 1 / 2 / -1;
+}
+#quick-links {
+    grid-area: 2 / 1 / -1 / 2;
+}
+#coming-soon {
+    grid-area: 2 / -2 / -1 / -1;
+}
+.movie-cards {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+#grid-container img {
+    float: left;
+    max-width: 200px;
 }
 
 @media screen and (min-width: 480px) {
@@ -176,9 +204,13 @@ input[type="submit"] {
         padding: 0 .5em .2em;
         font-size: medium;
     }
-    input[type="date"], input[type="number"] {
-        width: 50%;
+    form input, form select {
+        padding: .2em .4em;
     }
+    fieldset {
+        padding-inline: 10%;
+    }
+    
 }
 @media screen and (min-width: 768px) {
     #welcome {
@@ -195,7 +227,7 @@ input[type="submit"] {
     .card-info {
         line-height: 150%;
     }
-    form h1 {
+    h1 {
         font-size: 3rem;
         text-align: left;
     }

@@ -6,7 +6,7 @@ function loadHeader() {
         <ul id="nav-list">
             <li><a class="nav-links" href="index.html">Home</a></li>
             <li><a class="nav-links" href="get-tickets.html">Get Tickets</a></li>
-            <li><a class="nav-links" href="">Now Playing</a></li>
+            <li><a class="nav-links" href="now-playing.html">Now Playing</a></li>
             <li><a class="nav-links" href="">Locations</a></li>
             <li><a class="nav-links" href="">Membership</a></li>
             <li><a class="nav-links" href="">News</a></li>
