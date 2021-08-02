@@ -28,6 +28,9 @@ h1 {
 h2, h3 {
     color: var(--primary-logo-color);
 }
+p {
+    line-height: 135%;
+}
 
 /* header styles */
 header {
@@ -92,7 +95,8 @@ footer {
 }
 
 .content {
-    max-width: 1200px;  
+    max-width: 1280px;  
+    margin-inline: auto;  
 }
 
 /* =============================
@@ -174,10 +178,125 @@ input[type="date"], input[type="number"] {
 /* =============================
     Now Playing Page
 ============================= */
-#grid-header {
+.movie-cards {
+    border-bottom: 2px white solid;
+    background-color: var(--translucent-black);
+    padding: .5em;
+}
+.movie-cards img{
+    display: block;
+    margin-inline: auto;
+}
+.movie-cards h3 {
+    text-align: center;
+}
+#coming-soon h2, #coming-soon h3 {
+    color: white;
+    text-align: center;
+}
+#coming-soon h3 {
+    font-size: smaller;
+    margin-top: .2em;
+}
+.coming-soon-movies {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    text-align: center;
+}
+.coming-soon-movies > div {
+    flex: 1 1 0;
+    padding: .5em;
+}
+.coming-soon-movies img {
+    max-width: 175px;
+}
+
+/* =============================
+    Pricing Page
+============================= */
+table {
+    border-collapse: collapse;
+    margin-inline: auto;
+    width: 100%;
+    text-align: center;
+}
+thead, #surcharge-header {
+    height: 4em;
+    background-color: var(--translucent-black);
+}
+th[scope="row"] {
+    height: 3em;
+    background-color: var(--translucent-black);
+    text-align: left;
+    padding-left: .2em;
+}
+td {
+    background-color: var(--bg-color-1);
+}
+tr {
+    border-bottom: white solid 1px;
+}
+.add-info {
+    background-color: var(--translucent-black);
+    padding: .5em;
+    margin-block: 1em;
+}
+.disclaimer {
+    font-style: italic;
+    font-size: 0.9em;
+}
+
+/* =============================
+    Membership Page
+============================= */
+#membership-info {
+    margin: .5em;
+}
+.tier-cards {
+    background-color: var(--translucent-black);
+    margin: 1em .5em;
+    border-radius: 1em;
+    text-align: center;
+    overflow: hidden;
+}
+#gold-tier h2, #silver-tier h2, #bronze-tier h2 {
+    margin: 0;
+    color: black;
+    padding: 1em;
+    text-transform: uppercase;
+}
+#gold-tier h2 {
+    background-color: #eab639;
+}
+#silver-tier h2 {
+    background-color: #a7a4b2;
+}
+#bronze-tier h2 {
+    background-color: #a16834;
+}
+.tier-img-containers {
+    background-color: #f6fcff;
+    text-align: center;
+}
+.tier-benefits {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.tier-benefits li {
+    text-align: center;
+    padding: .5em;
+    margin-inline: 1em
+}
+.tier-benefits li + li {
+    border-top: white solid 1px;
+}
+.tier-prices {
+    padding: .5em;
+    font-weight: bold;
+    text-align: center;
+    background-color: var(--primary-logo-color);
 }
 
 @media screen and (min-width: 480px) {
@@ -188,31 +307,52 @@ input[type="date"], input[type="number"] {
         padding: 0 .5em .2em;
         font-size: medium;
     }
+
     form input, form select {
         padding: .2em .4em;
     }
     fieldset {
         padding-inline: 10%;
     }
-    
+
+    .movie-cards {
+        margin: 1.5em;
+    }
+
+    #pricing-container {
+        padding-inline: 1em;
+    }
+    .add-info {
+        padding: 1em 1em 1.5em;
+    }
 }
 @media screen and (min-width: 768px) {
     #welcome {
         margin-inline: 3em;
     }
-    .content {
-        width: 90%;
-        margin-inline: auto;  
-    }
     .cards {
         box-shadow: .2em .2em .2em #222;
         border-radius: .5em;
+        margin-inline: 5%;
     }
-    .card-info {
+    p {
         line-height: 150%;
     }
     h1 {
         font-size: 3rem;
+    }
+
+    #pricing-container {
+        padding-inline: 3em;
+    }
+    th {
+        font-size: 1.3rem;
+    }
+    td {
+        font-size: 1.15rem;
+    }
+    th[scope="row"] {
+        padding-left: 1em;
     }
 }
 @media screen and (min-width: 940px) {
@@ -232,6 +372,7 @@ input[type="date"], input[type="number"] {
         flex-direction: row;
         justify-content: flex-end;
     }
+
     #welcome h1 {
         font-size: 4rem;
     }
@@ -246,32 +387,41 @@ input[type="date"], input[type="number"] {
     .cards:nth-child(odd) {
         flex-direction: row-reverse;
     }
+
     #grid-container {
         display: grid;
-        grid-template-columns: min-content 1fr min-content;
+        grid-template-columns:  1fr min-content;
         grid-template-rows: min-content repeat(6, max-content);
         grid-auto-flow: column;
         gap: 1em;
+        margin: 1em;
     }
     #grid-header {
         grid-area: 1 / 1 / 2 / -1;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-    #search-showtimes {
-        grid-area: 2 / 1 / -1 / 2;
     }
     #coming-soon {
-        grid-area: 2 / -2 / 8 / -1;
+        grid-area: 2 / -2 / -1 / -1;
         background-color: var(--translucent-black);
         padding-inline: .5em;
     }
     .movie-cards {
         background-color: var(--translucent-black);
+        margin: 0;
     }
-    #grid-container img {
+    .movie-cards h3 {
+        text-align: left;
+    }
+    .movie-cards img {
         float: left;
         max-width: 200px;
+        margin-right: .5em;
+    }
+
+    #tiers-container {
+        display: flex;
+        align-items: flex-start;
+    }
+    .tier-cards {
+        flex: 1 1 30%; /* 3 column layout */
     }
 }

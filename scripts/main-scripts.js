@@ -7,8 +7,8 @@ function loadHeader() {
             <li><a class="nav-links" href="index.html">Home</a></li>
             <li><a class="nav-links" href="get-tickets.html">Get Tickets</a></li>
             <li><a class="nav-links" href="now-playing.html">Now Playing</a></li>
-            <li><a class="nav-links" href="">Locations</a></li>
-            <li><a class="nav-links" href="">Membership</a></li>
+            <li><a class="nav-links" href="pricing.html">Pricing</a></li>
+            <li><a class="nav-links" href="membership.html">Membership</a></li>
             <li><a class="nav-links" href="">News</a></li>
             <li><a class="nav-links" href="">Contact Us</a></li>
         </ul>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Vivid Cinemas - Pricing</title>
+
+        <link rel="icon" href="images/film-reel.svg" />
+        <link rel="stylesheet" href="styles/main-styles.css" />
+        <link href="https://fonts.googleapis.com/css2?family=Megrim&family=Raleway" rel="stylesheet" />
+    </head>
+
+    <script src="scripts/main-scripts.js"></script>
+
+    <body onload="loadHeader(); loadFooter();">
+        <header></header>
+
+        <div class="content">
+            <div id="pricing-container">
+                <h1>Ticket Pricing</h1>
+                <table>
+                    <colgroup id="left-colgroup"></colgroup>
+                    <colgroup id="right-colgroup" span="3"></colgroup>
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>Adult</th>
+                            <th>Children</th>
+                            <th>Seniors</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">Evening</th>
+                            <td>$9.50</td>
+                            <td>$7.50</td>
+                            <td>$7.50</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Matinee</th>
+                            <td>$6.00</td>
+                            <td>$6.00</td>
+                            <td>$6.00</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Morning</th>
+                            <td>$5.00</td>
+                            <td>$5.00</td>
+                            <td>$5.00</td>
+                        </tr>
+                        <tr id="surcharge-header">
+                            <th colspan="4">Premium Tickets</th>
+                        </tr>
+                        <tr>
+                            <th scope="row">3D</th>
+                            <td colspan="3">+$2.50</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">IMAX</th>
+                            <td colspan="3">+$3.50</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Dolby Atmos</th>
+                            <td colspan="3">+$3.50</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <section class="add-info">
+                    <h2>Online Ticket Purchasing</h2>
+                    <p>
+                        Tickets can quickly and easily be purchased online. Tickets can typically be purchased up to 1 week
+                        in advance or even more for special screenings. Using your computer, tablet, or mobile devices,
+                        visit our web site for show times and click the Get Tickets button. Follow the steps to
+                        purchase your tickets and enjoy the show!
+                    </p>
+                    <p class="disclaimer">
+                        Ticket prices and showtimes are subject to change without notice. All prices include tax.
+                    </p>
+                </section>
+            </div>
+        </div>
+
+        <footer></footer>
+    </body>
+</html>
