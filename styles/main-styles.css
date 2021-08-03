@@ -28,8 +28,14 @@ h1 {
 h2, h3 {
     color: var(--primary-logo-color);
 }
-p {
-    line-height: 135%;
+p, dl {
+    line-height: 140%;
+}
+a:link, a:visited {
+    color: var(--primary-logo-color)
+}
+a:focus, a:hover, a:active {
+    color: var(--secondary-logo-color)
 }
 
 /* header styles */
@@ -73,12 +79,12 @@ nav a {
     display: block;
     padding: .1em;
 }
-.nav-links {
+.nav-links:link, .nav-links:visited {
     color: var(--primary-logo-color);
     padding: 1.3em .8em;
     text-align: center;
 }
-.nav-links:hover, .nav-links:focus {
+.nav-links:focus, .nav-links:hover, .nav-links:active {
     background-color: black;
 } 
 header button:active, .nav-links:active {
@@ -156,7 +162,7 @@ fieldset + fieldset {
 }
 fieldset {
     padding-inline: 5%;
-    background-color: rgba(0, 0, 0, 0.7);;
+    background-color: var(--translucent-black);
 }
 .form-buttons {
     display: flex;
@@ -299,6 +305,54 @@ tr {
     background-color: var(--primary-logo-color);
 }
 
+/* =============================
+    Locations Page
+============================= */
+#locations-content {
+    background-color: var(--translucent-black);
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2em;
+}
+#location-cards-container {
+    padding: 0 .5em 1em;
+}
+.location-cards {
+    margin-block: .5em;
+    padding-inline:.5em;
+    border: white solid 2px;
+    border-radius: .5em;
+}
+.location-cards h3 {
+    color: white;
+}
+#amenities-sidebar {
+    padding: .5em;
+    border-top: white solid 4px;
+}
+#amenities-sidebar li {
+    line-height: 160%;
+}
+
+/* =============================
+    Conact Us Page
+============================= */
+dt {
+    font-weight: bold;
+}
+dt {
+    margin-top: 1em;
+}
+#contact-links {
+    text-align: center;
+}
+#contact-links a {
+    font-size: 1.2em;
+}
+#contact-links h4 {
+    margin-bottom: .2em;
+}
+
 @media screen and (min-width: 480px) {
     .cards {
         padding: .5em;
@@ -325,8 +379,28 @@ tr {
     .add-info {
         padding: 1em 1em 1.5em;
     }
+
+    #locations-content {
+        margin-inline: 1em;
+    }
+    #location-cards-container {
+        padding: 1.5em;
+    }
+    .location-cards, #amenities-sidebar {
+        padding-inline: 1em;
+    }
+    .contact-info {
+        margin: 1em;
+        padding-inline: 2em;
+    }
 }
 @media screen and (min-width: 768px) {
+    p, dl {
+        line-height: 160%;
+    }
+    h1 {
+        font-size: 3rem;
+    }
     #welcome {
         margin-inline: 3em;
     }
@@ -334,12 +408,6 @@ tr {
         box-shadow: .2em .2em .2em #222;
         border-radius: .5em;
         margin-inline: 5%;
-    }
-    p {
-        line-height: 150%;
-    }
-    h1 {
-        font-size: 3rem;
     }
 
     #pricing-container {
@@ -353,6 +421,26 @@ tr {
     }
     th[scope="row"] {
         padding-left: 1em;
+    }
+
+    #locations-content {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    #location-cards-container {
+        padding: 0 2em;
+        flex: 0 1 70%;
+    }
+    .location-cards {
+        margin-block: 2em;
+    }
+    #amenities-sidebar {
+        border-top: none;
+        border-left: white solid 4px;
+        flex: 1 0 0%;
+    }
+    #amenities-sidebar h2 {
+        text-align: center;
     }
 }
 @media screen and (min-width: 940px) {

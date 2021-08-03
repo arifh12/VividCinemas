@@ -9,8 +9,8 @@ function loadHeader() {
             <li><a class="nav-links" href="now-playing.html">Now Playing</a></li>
             <li><a class="nav-links" href="pricing.html">Pricing</a></li>
             <li><a class="nav-links" href="membership.html">Membership</a></li>
-            <li><a class="nav-links" href="">News</a></li>
-            <li><a class="nav-links" href="">Contact Us</a></li>
+            <li><a class="nav-links" href="locations.html">Locations</a></li>
+            <li><a class="nav-links" href="contact-us.html">Contact Us</a></li>
         </ul>
     </nav>
     <button onclick="toggleNav()">Menu</button>`;

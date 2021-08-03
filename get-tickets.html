@@ -9,15 +9,14 @@
     <link rel="icon" href="images/film-reel.svg" />
     <link rel="stylesheet" href="styles/main-styles.css" />
     <link href="https://fonts.googleapis.com/css2?family=Megrim&family=Raleway" rel="stylesheet" />
+    <script src="scripts/main-scripts.js"></script>
 </head>
-
-<script src="scripts/main-scripts.js"></script>
 
 <body onload="loadHeader(); loadFooter();">
     <header></header>
 
     <div class="content">
-        <form action="mailto:example@mail.com" method="POST" enctype="text/plain">
+        <form action="mailto:tickets@vivid.com?subject=Ticket%20Purchase" method="POST" enctype="text/plain">
             <h1>Purchase Your Tickets</h1>
             
             <fieldset>
@@ -59,7 +58,7 @@
                     </li>
                     <li>
                         <label for="tickets">Number of Tickets:</label><br>
-                        <input id="tickers" type="number" name="tickets" min="1" max="25" required>
+                        <input id="tickets" type="number" name="tickets" min="1" max="25" required>
                     </li>
                 </ul>
             </fieldset>
